@@ -50,7 +50,7 @@ if (($handle = fopen($spreadsheet_url, "r")) !== FALSE) {
 
         $pod->set("title", $row[0]);
         $pod->set("description", $row[2]);
-        $pod->set("media_url", $row[3]);
+        $pod->set("media_url", get_media_from_url($row[3]));
 
         $pod->set("date", date('r',time()));
 
